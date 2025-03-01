@@ -246,6 +246,12 @@ p {
   opacity: 0;
 }
 
+footer {
+  background-color: var(--color-pale-blue);
+  padding: 16px;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   main {
     background-color: var(--color-pale-blue);
