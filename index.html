@@ -25,62 +25,66 @@
   <body>
     <main>
       <h1 class="sr-only">Test results</h1>
-      <section class="result">
-        <h2 class="result__title">Your Result</h2>
-        <div class="result__score-container">
-          <meter value="76" min="0" max="100" class="sr-only">76 of 100</meter>
-          <p class="result__score-display">
-            <span class="result__score-value">76</span>
-            <span class="result__score-max">of 100</span>
+      <div class="card">
+        <section class="result">
+          <h2 class="result__title">Your Result</h2>
+          <div class="result__score-container">
+            <meter value="76" min="0" max="100" class="sr-only">
+              76 of 100
+            </meter>
+            <p class="result__score-display">
+              <span class="result__score-value">76</span>
+              <span class="result__score-max">of 100</span>
+            </p>
+          </div>
+          <p class="result__grade">Great</p>
+          <p class="result__description">
+            You scored higher than 65% of the people who have taken these tests.
           </p>
-        </div>
-        <p class="result__grade">Great</p>
-        <p class="result__description">
-          You scored higher than 65% of the people who have taken these tests.
-        </p>
-      </section>
-      <section class="summary">
-        <h2 class="summary__title">Summary</h2>
-        <div class="summary__sections">
-          <div class="summary__section summary__section--reaction">
-            <span class="summary__section-heading-container">
-              <img src="./assets/images/icon-reaction.svg" alt="" />
-              <h3 class="summary__section-title">Reaction Time</h3>
-            </span>
-            <p class="summary__section-score">
-              <span class="summary__section-score--number">80</span> / 100
-            </p>
+        </section>
+        <section class="summary">
+          <h2 class="summary__title">Summary</h2>
+          <div class="summary__sections">
+            <div class="summary__section summary__section--reaction">
+              <span class="summary__section-heading-container">
+                <img src="./assets/images/icon-reaction.svg" alt="" />
+                <h3 class="summary__section-title">Reaction Time</h3>
+              </span>
+              <p class="summary__section-score">
+                <span class="summary__section-score--number">80</span> / 100
+              </p>
+            </div>
+            <div class="summary__section summary__section--memory">
+              <span class="summary__section-heading-container">
+                <img src="./assets/images/icon-memory.svg" alt="" />
+                <h3 class="summary__section-title">Memory</h3>
+              </span>
+              <p class="summary__section-score">
+                <span class="summary__section-score--number">92</span> / 100
+              </p>
+            </div>
+            <div class="summary__section summary__section--verbal">
+              <span class="summary__section-heading-container">
+                <img src="./assets/images/icon-verbal.svg" alt="" />
+                <h3 class="summary__section-title">Verbal</h3>
+              </span>
+              <p class="summary__section-score">
+                <span class="summary__section-score--number">61</span> / 100
+              </p>
+            </div>
+            <div class="summary__section summary__section--visual">
+              <span class="summary__section-heading-container">
+                <img src="./assets/images/icon-visual.svg" alt="" />
+                <h3 class="summary__section-title">Visual</h3>
+              </span>
+              <p class="summary__section-score">
+                <span class="summary__section-score--number">72</span> / 100
+              </p>
+            </div>
           </div>
-          <div class="summary__section summary__section--memory">
-            <span class="summary__section-heading-container">
-              <img src="./assets/images/icon-memory.svg" alt="" />
-              <h3 class="summary__section-title">Memory</h3>
-            </span>
-            <p class="summary__section-score">
-              <span class="summary__section-score--number">92</span> / 100
-            </p>
-          </div>
-          <div class="summary__section summary__section--verbal">
-            <span class="summary__section-heading-container">
-              <img src="./assets/images/icon-verbal.svg" alt="" />
-              <h3 class="summary__section-title">Verbal</h3>
-            </span>
-            <p class="summary__section-score">
-              <span class="summary__section-score--number">61</span> / 100
-            </p>
-          </div>
-          <div class="summary__section summary__section--visual">
-            <span class="summary__section-heading-container">
-              <img src="./assets/images/icon-visual.svg" alt="" />
-              <h3 class="summary__section-title">Visual</h3>
-            </span>
-            <p class="summary__section-score">
-              <span class="summary__section-score--number">72</span> / 100
-            </p>
-          </div>
-        </div>
-        <a class="summary__button" href="#">Continue</a>
-      </section>
+          <a class="summary__button" href="#">Continue</a>
+        </section>
+      </div>
     </main>
     <footer>
       <p>

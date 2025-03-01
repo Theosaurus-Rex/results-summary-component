@@ -59,6 +59,10 @@ p {
   border-width: 0;
 }
 
+.card {
+  background-color: var(--color-white);
+}
+
 .result {
   background: linear-gradient(
     var(--color-light-slate-blue),
@@ -73,8 +77,9 @@ p {
   padding-right: 56px;
   border-bottom-right-radius: 32px;
   border-bottom-left-radius: 32px;
-  box-shadow: 0 30px 60px 0 rgba(61, 108, 236, 0.15);
-  z-index: 1;
+  box-shadow: 0 20px 30px -15px rgba(61, 108, 236, 0.15);
+  position: relative;
+  z-index: 2;
 }
 
 .result__title {
@@ -138,6 +143,7 @@ p {
   width: 100%;
   box-sizing: border-box;
   padding: 24px 32px;
+  z-index: 1;
 }
 
 .summary__sections {
@@ -203,7 +209,13 @@ p {
 }
 
 .summary__button {
-  background-color: var(--color-dark-gray-blue);
+  background-image: linear-gradient(
+    var(--color-light-slate-blue),
+    var(--color-light-royal-blue)
+  );
+  position: relative;
+  z-index: 1;
+  transition: background-image 0.3s ease;
   color: var(--color-white);
   font-size: 1.2rem;
   font-weight: 700;
@@ -214,4 +226,85 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Need to use pseudo-elements to create the gradient effect on the button and have it transition smoothly on hover. The gradient effect should be visible only when the button is hovered. */
+.summary__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-dark-gray-blue);
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.summary__button:hover::before {
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    background-color: var(--color-pale-blue);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 736px;
+    box-shadow: 0 30px 60px 0 rgba(61, 108, 236, 0.15);
+    border-radius: 32px;
+  }
+
+  .result {
+    border-radius: 32px;
+    z-index: 2;
+  }
+
+  .result__title {
+    font-size: 1.5rem;
+  }
+
+  .result__score-container {
+    height: 200px;
+    width: 200px;
+  }
+
+  .result__score-value {
+    font-size: 4.5rem;
+  }
+
+  .result__score-max {
+    font-size: 1.2rem;
+  }
+
+  .result__grade {
+    font-size: 2rem;
+  }
+
+  .result__description {
+    font-size: 1.2rem;
+  }
+
+  .summary {
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+  }
+
+  .summary__title {
+    font-size: 1.5rem;
+  }
+
+  .summary__section-title {
+    font-size: 1.2rem;
+  }
+
+  .summary__section-score {
+    font-size: 1.2rem;
+  }
 }
