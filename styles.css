@@ -29,12 +29,22 @@ main {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--color-pale-blue);
+  background-color: var(--color-white);
 }
 
 body {
   margin: 0;
   font-family: "Hanken Grotesk", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 
 .sr-only {
@@ -63,6 +73,8 @@ body {
   padding-right: 56px;
   border-bottom-right-radius: 32px;
   border-bottom-left-radius: 32px;
+  box-shadow: 0 30px 60px 0 rgba(61, 108, 236, 0.15);
+  z-index: 1;
 }
 
 .result__title {
@@ -78,6 +90,7 @@ body {
   height: 140px;
   width: 140px;
   margin-top: 16px;
+  margin-bottom: 24px;
   background: linear-gradient(
     to bottom,
     var(--color-violet-blue),
@@ -110,6 +123,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-white);
+  margin-bottom: 8px;
 }
 
 .result__description {
@@ -117,4 +131,87 @@ body {
   font-weight: 400;
   text-align: center;
   color: var(--color-light-lavender);
+}
+
+.summary {
+  background-color: var(--color-white);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 32px;
+}
+
+.summary__sections {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-dark-gray-blue);
+  margin-bottom: 24px;
+}
+
+.summary__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.summary__section-heading-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.summary__section-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.summary__section--reaction {
+  background-color: var(--color-light-red-pale);
+  color: var(--color-light-red);
+}
+
+.summary__section--memory {
+  background-color: var(--color-orangey-yellow-pale);
+  color: var(--color-orangey-yellow);
+}
+
+.summary__section--verbal {
+  background-color: var(--color-green-teal-pale);
+  color: var(--color-green-teal);
+}
+
+.summary__section--visual {
+  background-color: var(--color-cobalt-blue-pale);
+  color: var(--color-cobalt-blue);
+}
+
+.summary__section-score {
+  color: hsla(224, 30%, 27%, 0.5);
+}
+
+.summary__section-score--number {
+  font-weight: 700;
+  color: var(--color-dark-gray-blue);
+}
+
+.summary__button {
+  background-color: var(--color-dark-gray-blue);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 128px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
